@@ -1,0 +1,33 @@
+
+@mixin buttons (){
+ border: none;
+ padding: 5px 10px;
+ border-radius: 5px;
+ &:hover{
+    cursor: pointer;
+ }
+//  background-color: $back-color;
+//  color: $color-font;
+}
+
+@mixin table(){
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border: 3px solid black;
+ 
+}
+
+@mixin th(){
+   padding: 10px;
+    text-align: center;
+    border-bottom: 3px solid #000000;
+    background-color: #f2f2f2;
+    color: #000000;
+}
+
+@mixin td(){
+   padding: 10px;
+   text-align: center;
+   border: 2px solid black;
+}

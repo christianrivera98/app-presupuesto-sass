@@ -1,0 +1,74 @@
+@import 'universals';
+@import 'variables';
+@import 'mixings';
+
+body{
+    background-color: rgb(119, 240, 135);
+}
+.header{
+    &__nav{
+        display: flex;
+        justify-content: space-between;
+        h1{
+            color: $color-primary;
+        }
+    }
+}
+
+.button{
+    @include buttons();
+    &--nav{
+        background-color: $color-tertiary;
+        color: #fff;
+        &:hover{
+            color: #fff;
+            background-color: $color-tertiary-hover;
+        }
+    }
+    &--success{
+        height: 40px;
+        background-color: $color-success;
+        color: #fff;
+        &:hover{
+            color:  #ffff;
+            background-color: $color-success-hover;
+        }
+    }
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    &__label{
+        font-size: 14px;
+        color: $color-primary;
+        font-weight: 600;
+    }
+
+    &__input{
+        padding: 5px 10px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+    }
+}
+
+.main__table{
+    @include table();
+}
+
+
+th{
+    border: 2px solid black;
+    @include th();
+}
+
+tr{
+    border: 2px solid black;
+}
+
+td{
+    @include td();
+}
